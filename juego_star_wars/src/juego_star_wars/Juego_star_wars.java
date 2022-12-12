@@ -12,11 +12,13 @@ public class Juego_star_wars {
     public static void main(String[] args) {
 
         Scanner reader = new Scanner(System.in);
+        // Hay System.out comentados que dan el resultado de los niveles
         
         int respNivel1 = 0, resultadoNivel1 = 0;
         int respNivel2 = 0, resultadoNivel2 = 1;
         int respNivel3, resultadoNivel3;
         int respNivel4, resultadoNivel4;
+        int respNivel5, resultadoNivel5;
         
         System.out.println("=== STAR WARS CÓDIGOS SECRETOS ===\n" +
                             "Hace mucho tiempo, en una galaxia muy, muy lejana\n" +
@@ -49,7 +51,7 @@ public class Juego_star_wars {
                 resultadoNivel1 += i;
             }
             
-            System.out.println("Resultado nivel 1: "+ resultadoNivel1);
+            // System.out.println("Resultado nivel 1: "+ resultadoNivel1);
             
             System.out.println("Introduce la respuesta: ");
             respNivel1 = reader.nextInt();
@@ -78,12 +80,11 @@ public class Juego_star_wars {
                                     "es el productorio entre el nº del agente y el nº de la nave (ambos inclusive).\n" +
                                     "¿Cuál es el código?");
             
-                //int respNivel2 = 0, resultadoNivel2 = 0;
                 for(int i = P1; i <= P2; i++){
                     resultadoNivel2 = resultadoNivel2 * i;
                 }
                 
-                System.out.println("Resultado nivel 2: " + resultadoNivel2);
+                //System.out.println("Resultado nivel 2: " + resultadoNivel2);
             
                 System.out.println("Introduce la respuesta: ");
                 respNivel2 = reader.nextInt();
@@ -110,7 +111,7 @@ public class Juego_star_wars {
                     }
                     
                     resultadoNivel3 = factorial;
-                    System.out.println("Resultado nivel 3: " + resultadoNivel3);
+                    //System.out.println("Resultado nivel 3: " + resultadoNivel3);
                     
                     System.out.println("Introduce la respuesta: ");
                     respNivel3 = reader.nextInt();
@@ -142,32 +143,104 @@ public class Juego_star_wars {
                             isPrimo = 0;
                         }
                         
-                    resultadoNivel4 = isPrimo;
-                    System.out.println("Resultado nivel 4: " + resultadoNivel4);
-                    
-                    System.out.println("Introduce la respuesta: ");
-                    respNivel4 = reader.nextInt();   
-                    
-                    if(resultadoNivel4 == respNivel4){
+                        resultadoNivel4 = isPrimo;
+                        //System.out.println("Resultado nivel 4: " + resultadoNivel4);
+
+                        System.out.println("Introduce la respuesta: ");
+                        respNivel4 = reader.nextInt();   
+
+                        if(resultadoNivel4 == respNivel4){
+                           // Nivel 5
+                           
+                            // M y S: Número entero aleatorio entre 5 y 10
+                            int M = (int) (5 + Math.random() * (10-5+1)), factM = 1;
+                            int S = (int) (5 + Math.random() * (10-5+1)), factS = 1;         
+
+                            System.out.println("Consiguen entrar al reactor. Ya solo queda que Luke Skywalker coloque la bomba,\n" +
+                                                "programe el temporizador y salir de allí corriendo. Necesita programarlo para que\n" +
+                                                "explote en exactamente "+ M +" minutos y "+ S +" segundos, el tiempo suficiente para escapar\n" +
+                                                "antes de que explote pero sin que el sistema de seguridad anti-explosivos detecte y\n" +
+                                                "desactive la bomba. Pero el temporizador utiliza un reloj Zordgiano un tanto\n" +
+                                                "peculiar. Para convertir los minutos y segundos al sistema Zordgiano hay que sumar\n" +
+                                                "el factorial de M y el factorial de S. ¿Qué valor debe introducir?");
+
+                            for(int i=1;i<=M;i++){
+                                factM = factM * i;
+                            }
+                            
+                            for(int i=1;i<=S;i++){
+                                factS = factS * i;
+                            }
+                            
+                            resultadoNivel5 = factM + factS;
+                            //System.out.println("Resultado nivel 5: " + resultadoNivel5);
+                            
+                            System.out.println("Introduce la respuesta: ");
+                            respNivel5 = reader.nextInt();
+                            
+                            if(resultadoNivel5 == respNivel5){
+                                System.out.println("Luke Skywalker introduce el tiempo correcto, activa el temporizador y empiezan a\n" +
+                                                    "sonar las alarmas. Salen de allí corriendo, no hay tiempo que perder. La nave se\n" +
+                                                    "convierte en un hervidero de soldados de arriba a abajo y entre el caos que les rodea\n" +
+                                                    "consiguen llegar a la nave y salir de allí a toda prisa. A medida que se alejan\n" +
+                                                    "observan por la ventana la imagen de la colosal estrella de la muerte explotando en\n" +
+                                                    "el silencio del espacio, desapareciendo para siempre junto a los restos del malvado\n" +
+                                                    "imperio.\n" +
+                                                    "¡Has salvado la galaxia gracias a la Fuerza Jedi de las matemáticas! Enhorabuena ;D");
+                                
+                                // Fin
+                                System.out.println("Gracias por jugar :D");
+                                
+                            }else{
+                                // Perder            
+                                System.out.println("Ese no era el código correcto... \n" +
+                                                "La misión ha sido un fracaso... :( :( :(\n" +
+                                                "Todavía no eres un Maestro Jedi de las Matemáticas. ¡Vuelve a intentarlo!");
+                             
+                                // Fin
+                                System.out.println("Gracias por jugar :D");
+                            }
                         
+                        }else{
+                            // Perder            
+                            System.out.println("Ese no era el código correcto... \n" +
+                                                "La misión ha sido un fracaso... :( :( :(\n" +
+                                                "Todavía no eres un Maestro Jedi de las Matemáticas. ¡Vuelve a intentarlo!");
+                             
+                            // Fin
+                            System.out.println("Gracias por jugar :D");
+                        }
+    
                     }else{
-                         // Perder
-                    }
-                        
-                        
-                    }else{
-                        // Perder
-                    }
+                        // Perder            
+                        System.out.println("Ese no era el código correcto... \n" +
+                                            "La misión ha sido un fracaso... :( :( :(\n" +
+                                            "Todavía no eres un Maestro Jedi de las Matemáticas. ¡Vuelve a intentarlo!");
+                             
+                        // Fin
+                        System.out.println("Gracias por jugar :D");
+                        }
                     
                 }else{
-                    // Perder
-                }
+                    // Perder            
+                        System.out.println("Ese no era el código correcto... \n" +
+                                            "La misión ha sido un fracaso... :( :( :(\n" +
+                                            "Todavía no eres un Maestro Jedi de las Matemáticas. ¡Vuelve a intentarlo!");
+                             
+                    // Fin
+                        System.out.println("Gracias por jugar :D");
+                    }
                 
             }else{
-                // Perder
+                // Perder            
+                System.out.println("Ese no era el código correcto... \n" +
+                                    "La misión ha sido un fracaso... :( :( :(\n" +
+                                    "Todavía no eres un Maestro Jedi de las Matemáticas. ¡Vuelve a intentarlo!");
+                             
+                // Fin
+                System.out.println("Gracias por jugar :D");
             }
-            
         }
     }
-    
 }
+
