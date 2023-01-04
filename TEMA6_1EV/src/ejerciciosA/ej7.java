@@ -9,26 +9,26 @@ import java.util.Scanner;
 
 public class ej7 {
 
-    // Crea un programa que pida dos valores enteros N y M, 
-    // luego cree un array de tamaño N, escriba M en todas 
-    // sus posiciones y lo muestre por pantalla.
+    // Crea un programa que pida dos valores enteros P y Q, 
+    // luego cree un array que contenga todos los valores 
+    // desde P hasta Q, y lo muestre por pantalla.
     
     public static void main(String[] args) {
 
         Scanner reader = new Scanner(System.in);
         
-        int N,M;
+        int P,Q;
         System.out.println("Introduce un número entero: ");
-        N = reader.nextInt();
+        P = reader.nextInt();
         
-        System.out.println("Introduce otro número entero: ");
-        M = reader.nextInt();
+        System.out.println("Introduce otro número entero mayor: ");
+        Q = reader.nextInt();
         
-        int valores[] = new int[N];
-
+        int valores[] = new int[(Q-P+1)];
+        
 
         for (int i = 0; i < valores.length; i++) {
-            valores[i] = M;
+            valores[i] = i+P;
         }
 
         System.out.println("El array generado es: " + Arrays.toString(valores));
