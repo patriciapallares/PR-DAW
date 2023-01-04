@@ -16,7 +16,7 @@ public class ej2 {
                          
         Scanner reader = new Scanner(System.in);  
         
-        int valores[]= new int[10], valor;
+        int valores[]= new int[10], valor, suma=0;
         
         
         for(int i=0;i<10;i++){
@@ -26,9 +26,10 @@ public class ej2 {
             valores[i] = valor; 
         }
         
-        System.out.println("Los números son: ");
         for (int i = 0; i < valores.length; i++) {
-            System.out.println(valores[i]); 
+            suma += valores[i];
         }
+        
+        System.out.println("La suma es: "+ suma);
     }
 }
