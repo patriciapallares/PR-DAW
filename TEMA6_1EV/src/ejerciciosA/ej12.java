@@ -7,7 +7,6 @@ package ejerciciosA;
 
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.Collections;
 
 public class ej12 {
 
@@ -23,18 +22,36 @@ public class ej12 {
 
         Scanner reader = new Scanner(System.in);
         
-        Integer valores[]= new Integer[100], valoresInv[]= new Integer[100], valor;
+        int valores[]={1,2,3,4,5,6,7,8,9,10};
+        int V, P;
+        String text;
+       
         
-        for(int i=0;i<valores.length;i++){
-            valores[i] = i+1; 
+        do{
+        System.out.println("\n Menú:");
+        System.out.println("\n a. Mostrar valores. \n b. Introducir valor. \n c. Salir.");
+        text = reader.nextLine();
+            
+        if("a".equals(text)){
+            System.out.println("\n Los valores son: " + Arrays.toString(valores));
+            
+        }else if("b".equals(text)){
+            System.out.println("\n Introduce un valor entero: ");
+            V = reader.nextInt();
+            
+            System.out.println("Introduce una posición de 0 a 9: ");
+            P = reader.nextInt();
+            
+            for(int i=0;i<valores.length;i++){
+                if(i == P){
+                    valores[i]=V;
+                }
+            }
         }
         
-        System.out.println("El array generado es: " + Arrays.toString(valores));
         
-        System.arraycopy(valores, 0, valoresInv, 0, valores.length);
+        }while(!"c".equals(text));
         
-        Arrays.sort(valoresInv, Collections.reverseOrder());
-        
-        System.out.println("El otro array generado es: " + Arrays.toString(valoresInv));
+
     }
 }
