@@ -6,7 +6,6 @@ package ejerciciosA;
  */
 
 import java.util.Arrays;
-import java.util.Scanner;
 import java.util.Collections;
 
 public class ej11 {
@@ -18,9 +17,7 @@ public class ej11 {
     
     public static void main(String[] args) {
 
-        Scanner reader = new Scanner(System.in);
-        
-        Integer valores[]= new Integer[100], valoresInv[]= new Integer[100], valor;
+        Integer valores[]= new Integer[100], valoresInv[]= new Integer[100];
         
         for(int i=0;i<valores.length;i++){
             valores[i] = i+1; 
