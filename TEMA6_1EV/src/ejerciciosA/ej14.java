@@ -26,7 +26,7 @@ public class ej14 {
             }
         }
         
-        System.out.println("Los valores son: " + Arrays.toString(valores));
+        System.out.println(Arrays.toString(valores));
     }
 }
 

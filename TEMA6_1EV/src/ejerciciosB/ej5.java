@@ -10,6 +10,8 @@ import java.util.Scanner;
 
 public class ej5 {
     
+    // CAPTURA REFACTOR SIN ARRAYS
+    
     // Realiza un programa que lea una frase por teclado e indique si la frase 
     // es un palíndromo o no (ignorando espacios y sin diferenciar entre 
     // mayúsculas y minúsculas). Supondremos que el usuario solo introducirá 

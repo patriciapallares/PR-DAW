@@ -18,7 +18,7 @@ public class ej4 {
         
         Scanner reader = new Scanner(System.in);   
         // 4 alumnos, 5 asignaturas        
-        float notas[][] = new float[4][5],minima=0,maxima=0,media=0,sumaNotas=0;
+        float notas[][] = new float[4][5],minima,maxima,sumaNotas;
             
             for (int x=0; x < notas.length; x++) {
                 

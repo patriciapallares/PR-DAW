@@ -9,6 +9,8 @@ import java.util.Scanner;
 
 public class ej3 {
     
+    // CAPTURA CORRECCIÓN
+    
     // Crea un programa que pida por teclado tres cadenas de texto: nombre y 
     // dos apellidos. Luego mostrará un código de usuario (en mayúsculas) 
     // formado por la concatenación de las tres primeras letras de cada uno de 

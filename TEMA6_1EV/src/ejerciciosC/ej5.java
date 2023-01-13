@@ -9,6 +9,8 @@ import java.util.Scanner;
 
 public class ej5 {
     
+    // CORREGIR FOR LÍNEA 50
+    
     // Necesitamos crear un programa para registrar sueldos de hombres y 
     // mujeres de una empresa y detectar si existe brecha salarial entre ambos. 
     // El programa pedirá por teclado la información de N personas distintas 

@@ -32,7 +32,7 @@ public class ej2 {
         aCaracteres1 = minusCadena1.toCharArray();
         aCaracteres2 = minusCadena2.toCharArray();
         
-        // equalsIgnoreCase(String s)
+        // equalsIgnoreCase(String s) !!
         
         if(Arrays.equals(aCaracteres1, aCaracteres2)){
             System.out.println("Las frases son iguales.");

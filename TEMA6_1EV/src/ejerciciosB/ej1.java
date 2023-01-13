@@ -12,6 +12,8 @@ public class ej1 {
     
     // PENDIENTE
     
+    // CAPTURA CORRECCIÓN
+    
     // Crea un programa que pida una cadena de texto por teclado y luego 
     // muestre cada palabra de la cadena en una línea distinta.
     
