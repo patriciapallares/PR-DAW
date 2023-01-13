@@ -8,9 +8,7 @@ import java.util.Scanner;
  */
 
 public class ej4 {
-    
-    // CORREGIR EL ORDEN DE LAS EJECUCIONES EN LAS LÍNEAS 31 Y 32 
-    
+
     // Crea un programa que muestre por pantalla cuantas vocales de cada tipo 
     // hay (cuantas ‘a’, cuantas ‘e’, etc.) en una frase introducida por teclado. 
     // No se debe diferenciar entre mayúsculas y minúsculas. Por ejemplo dada 

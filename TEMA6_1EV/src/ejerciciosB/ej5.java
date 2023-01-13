@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class ej5 {
     
-    // CAPTURA REFACTOR SIN ARRAYS
+    // CAPTURA REFACTOR SIN ARRAYS // PENDIENTE
     
     // Realiza un programa que lea una frase por teclado e indique si la frase 
     // es un palíndromo o no (ignorando espacios y sin diferenciar entre 
