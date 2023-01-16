@@ -73,7 +73,7 @@ public class EjercicioBanco {
                 // reposicionando las cuentas en el array.
                 
                 System.out.println("¿Cuál es el número de la cuenta que quieres eliminar?");
-                
+                 
                 
             }else if(menu == 3){
                 // Mostrar una cuenta (mostrará el número de cuenta y el saldo 

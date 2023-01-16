@@ -17,10 +17,13 @@ public class ej1 {
             for (int x=0; x < numeros.length; x++) {
                 
                 for (int y=0; y < numeros[x].length; y++) { 
+                    // numeros[x].length es la longitud de la columna
                     numeros[x][y] = acum;
                     acum++;
-                    System.out.println ("[" + x + "," + y + "] = " + numeros[x][y]);
+                    System.out.print(numeros[x][y]+" ");
+                    //System.out.println ("[" + x + "," + y + "] = " + numeros[x][y]);
                 }
+                System.out.println("");
                 
             }
     }

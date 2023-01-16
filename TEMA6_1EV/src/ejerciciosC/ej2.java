@@ -19,8 +19,10 @@ public class ej2 {
                 
                 for (int y=0; y < numeros[x].length; y++) { 
                     numeros[x][y] = (x+1)*(y+1);
-                    System.out.println ("[" + x + "," + y + "] = " + numeros[x][y]);
+                    // System.out.println ("[" + x + "," + y + "] = " + numeros[x][y]);
+                    System.out.printf("%4d", numeros[x][y]);
                 }
+                System.out.println("");
                 
             }
     }

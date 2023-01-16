@@ -9,6 +9,8 @@ import java.util.Scanner;
 
 public class ej3 {
     
+    // CAPTURA CORRECCIÓN
+    
     // Crea un programa que pida por teclado tres cadenas de texto: nombre y 
     // dos apellidos. Luego mostrará un código de usuario (en mayúsculas) 
     // formado por la concatenación de las tres primeras letras de cada uno de 
@@ -19,7 +21,7 @@ public class ej3 {
     
         Scanner reader = new Scanner(System.in); 
         String nombre = "", apellido1 = "", apellido2 = "", usuario="";
-        char[] arrayNombre, arrayApellido1, arrayApellido2, arrayUser, arrayUserUpper;
+        
         
         System.out.println("Introduce nombre: ");
         nombre = reader.nextLine();
@@ -29,7 +31,10 @@ public class ej3 {
         
         System.out.println("Introduce segundo apellido: ");
         apellido2 = reader.nextLine();
-
+        
+        /*
+        
+        char[] arrayNombre, arrayApellido1, arrayApellido2, arrayUser, arrayUserUpper;
         arrayNombre = nombre.toCharArray();
         arrayApellido1 = apellido1.toCharArray();
         arrayApellido2 = apellido2.toCharArray();
@@ -46,6 +51,9 @@ public class ej3 {
             }
             usuario+=arrayUser[i];
         }
+        */
+        
+        usuario = nombre.substring(0,3)+apellido1.substring(0,3)+apellido2.substring(0,3);
 
         System.out.println(usuario.toUpperCase());
     }
