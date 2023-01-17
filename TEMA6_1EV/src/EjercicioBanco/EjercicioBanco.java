@@ -1,5 +1,6 @@
 package EjercicioBanco;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class EjercicioBanco {
@@ -32,12 +33,13 @@ public class EjercicioBanco {
         */
     
         public static void main(String[] args){
+            
         
         Scanner reader = new Scanner(System.in);  
         
             float saldos[] = new float[10];
             float saldo;
-            int cuentas[] = new int[10];
+            float cuentas[] = new float[10];
             int numCuentas = 0;
             int menu;
         
@@ -73,7 +75,9 @@ public class EjercicioBanco {
                 // reposicionando las cuentas en el array.
                 
                 System.out.println("¿Cuál es el número de la cuenta que quieres eliminar?");
-                 
+                int numeroCuenta = reader.nextInt();
+                int posicion = -1;
+
                 
             }else if(menu == 3){
                 // Mostrar una cuenta (mostrará el número de cuenta y el saldo 
@@ -91,5 +95,6 @@ public class EjercicioBanco {
             }while(menu != 0);
             
     }
-    
+
+
 }
