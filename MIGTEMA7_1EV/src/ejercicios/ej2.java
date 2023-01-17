@@ -2,10 +2,6 @@ package ejercicios;
 
 import java.util.Scanner;
 
-/**
- *
- * @author patgon
- */
 public class ej2 {
 
     // Escribe un programa que pida la edad por teclado y muestre por pantalla 

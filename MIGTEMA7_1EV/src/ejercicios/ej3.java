@@ -2,10 +2,6 @@ package ejercicios;
 
 import java.util.Scanner;
 
-/**
- *
- * @author patgon
- */
 public class ej3 {
 
     // Escribe un programa que pida dos números enteros por teclado y muestre 
