@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public class ej8 {
     
-    // PENDIENTE
-    
     /*
     Escribe un programa que pida un valor N entero y luego muestre: el sumatorio
     desde 1 a N, el productorio de 1 a N y el valor intermedio entre 1 y N. 
@@ -18,20 +16,37 @@ public class ej8 {
     public static void main(String[] args){
                          
         Scanner reader = new Scanner(System.in);  
-        int N, resultado;
+        int N, resulSuma;
         
-        System.out.println("Introduce el ancho: ");
+        System.out.println("Introduce un número: ");
         N = reader.nextInt();
         
+        System.out.println("La suma es " + suma1aN(N));
+        System.out.println("El producto es " + producto1aN(N));
+        System.out.println("El intermedio es " + intermedio1aN(N));
     }
     
-    public static double perimetroRectangulo(double ancho, double alto){
-        double peri = ancho*2 + alto*2;
-        return peri;
+    public static int suma1aN(int n){
+        int suma = 0;
+        for(int i = 0; i <= n; i++){
+            suma += i;
+        }
+        return suma;
     }
     
-    public static double areaRectangulo(double ancho, double alto){
-        double area = alto * ancho;
-        return area;
+    public static int producto1aN(int n){
+        int prod = 1;
+        for(int i = 1; i <= n; i++){
+            prod=prod*i;   
+        }
+        return prod;
     }
+    
+    public static double intermedio1aN(int n){
+        double intermedio = (n+1)/2;
+        return intermedio;
+    }
+    
+    
+    
 }

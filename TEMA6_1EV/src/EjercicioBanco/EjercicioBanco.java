@@ -5,8 +5,6 @@ import java.util.Scanner;
 
 public class EjercicioBanco {
     
-        // PENDIENTE doWhile para comprobar menú del 1 al 6
-    
         // Escribir un programa que permita guardar las cuentas de un banco con 
         // sus respectivos saldos. Para ello, se guardará la información en un 
         // array paralelo (dos arrays unidimensionales, uno con los números de 
@@ -34,7 +32,6 @@ public class EjercicioBanco {
     
         public static void main(String[] args){
             
-        
         Scanner reader = new Scanner(System.in);  
         
             float saldos[] = new float[10];
