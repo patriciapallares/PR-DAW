@@ -108,10 +108,7 @@ public class EjercicioObligatorio6 {
         int arrayCorrectas[] = new int[alumnos];
         float nota = 0;
         
-        if(opcion == 1){
-            // Muestra la nota obtenida de cada estudiante. Esta nota 
-            // corresponde al número de aciertos que tuvo el estudiante.
-            
+        
             for (int xFilas=0; xFilas < arrayRespuestasAlumnos.length; xFilas++) {
 
                 for (int y=0; y < arrayRespuestasAlumnos[xFilas].length; y++) {
@@ -121,7 +118,7 @@ public class EjercicioObligatorio6 {
                     correctas=0;  
                     }
                     
-                    if(arrayRespuestasAlumnos[xFilas][y].equals(arrayRespCorrectas[xFilas])){
+                    if(arrayRespuestasAlumnos[xFilas][y].equals(arrayRespCorrectas[y])){
                         System.out.println("Correctas = "+ correctas );
                         
                         correctas++;
@@ -131,6 +128,18 @@ public class EjercicioObligatorio6 {
                     
                 }
                   
+            }        
+        
+        if(opcion == 1){
+            // Muestra la nota obtenida de cada estudiante. Esta nota 
+            // corresponde al número de aciertos que tuvo el estudiante.
+            
+            for (int i = 0; i < arrayCorrectas.length; i++) {
+
+                System.out.println("Alumnx " + arrayNombres[i]);
+                nota = arrayCorrectas[i];
+                System.out.println("Nota: "+ nota+"/"+N);
+                System.out.println("Nota decimal: "+ nota/N*10);
             }
             
             /*
