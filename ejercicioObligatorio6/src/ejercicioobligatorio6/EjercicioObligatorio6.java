@@ -9,6 +9,7 @@ import java.util.Scanner;
  */
 public class EjercicioObligatorio6 {
 
+    @SuppressWarnings("empty-statement")
     public static void main(String[] args) {
         
         Scanner reader = new Scanner(System.in);  
@@ -43,8 +44,6 @@ public class EjercicioObligatorio6 {
             arrayRespCorrectas[i] = rellenarRespCorrectas((i+1));
         }
         
-        // System.out.println("El array generado es: " + Arrays.toString(arrayRespCorrectas));
-        
         // matriz para guardar las respuestas a las preguntas del examen una 
         // fila por alumno y una columna por pregunta.
         String arrayRespuestasAlumnos[][] = new String[alumnos][N];
@@ -72,26 +71,12 @@ public class EjercicioObligatorio6 {
                 arrayRespuestasAlumnos[x][y] = resp;
             }              
         }
-        
-        // VER RESP ALUMNOS
-        for (int x=0; x < arrayRespuestasAlumnos.length; x++) {
-                
-                for (int y=0; y < arrayRespuestasAlumnos[x].length; y++) { 
-                    // numeros[x].length es la longitud de la columna
-                    System.out.print(arrayRespuestasAlumnos[x][y]+" ");
-                    //System.out.println ("[" + x + "," + y + "] = " + numeros[x][y]);
-                }
-                System.out.println("");
-                
-            }
-        
+
         //
         //
         //
         
         int opcion = 0, correctas=0;
-        
-
         
         System.out.println("Menú:");
         System.out.println("   • Opción 1 Notas: Muestra la nota obtenida de cada estudiante.\n" +
@@ -106,8 +91,6 @@ public class EjercicioObligatorio6 {
         }while(opcion<=0||opcion>4);
         
         int arrayCorrectas[] = new int[alumnos];
-        float nota = 0;
-        
         
             for (int xFilas=0; xFilas < arrayRespuestasAlumnos.length; xFilas++) {
 
@@ -135,35 +118,9 @@ public class EjercicioObligatorio6 {
             // corresponde al número de aciertos que tuvo el estudiante.
             
             for (int i = 0; i < arrayCorrectas.length; i++) {
-
-                System.out.println("Alumnx " + arrayNombres[i]);
-                nota = arrayCorrectas[i];
-                System.out.println("Nota: "+ nota+"/"+N);
-                System.out.println("Nota decimal: "+ nota/N*10);
+             
+                notaAlumno(arrayCorrectas[i],N);
             }
-            
-            /*
-            for (int x=0; x < arrayRespuestasAlumnos.length; x++) {
-
-                for (int y=0; y < arrayRespuestasAlumnos[x].length; y++) {
-                    
-                    if(arrayRespuestasAlumnos[x][y].equals(arrayRespCorrectas[x])){
-                        System.out.println("resp alum "+arrayRespuestasAlumnos[x][y]);
-                        System.out.println("resp correc "+arrayRespCorrectas[x]);
-                        correctas++;
-                        System.out.println("Correctas = "+ correctas );
-                    }                  
-                    arrayCorrectas[x] = correctas;
-                }
-                correctas=0;                    
-            }
-            
-            for (int i = 0; i < arrayCorrectas.length; i++) {
-
-                System.out.println("Alumnx " + arrayNombres[i]);
-                nota = arrayCorrectas[i];
-                System.out.println("Nota: "+ nota+"/"+N);
-            }*/
             
         }else if(opcion == 2){
             // Muestra la media de aciertos de los 8 alumnos.
@@ -192,18 +149,19 @@ public class EjercicioObligatorio6 {
                 
                 if(nombreAlumno.equalsIgnoreCase(arrayNombres[i])){
                     posicion = i;
-                }
-                
-            };
+                } 
+            }
             
             System.out.println("La posición de "+nombreAlumno+" es "+ posicion);
             
-            
-            
+            for (int i = 0; i < arrayCorrectas.length; i++) {
+                if(i == posicion){
+                    System.out.println("La nota de " + nombreAlumno + " es "+ arrayCorrectas[i]/N*10);
+                }
+            }
+    
         }else if(opcion == 4){
-            // Pregunta: Muestra el número de la pregunta más acertada.
-            
-            
+            // Pregunta: Muestra el número de la pregunta más acertada. 
         }
     }
     
@@ -237,22 +195,13 @@ public class EjercicioObligatorio6 {
             }
             
         } while(condicion);
-        System.out.println("Resp = " + resp);
         return resp;
     }
     
-
+    // 4. Método que devuelve la nota de un alumno.
     
-    
-    /*
-
-        4. Método que devuelve la nota de un alumno.
-        5. Método que devuelve la media.
-        6. Método que devuelve en número de pregunta más acertada.
-        7. Método para leer la respuesta a una pregunta.
-    
-    */
-    
-    
+    public static void notaAlumno(double n, int N){
+        System.out.println("Nota decimal por método: "+ n/N*10);
+    }
     
 }
