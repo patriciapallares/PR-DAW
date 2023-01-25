@@ -91,8 +91,7 @@ public class EjercicioObligatorio6 {
         
         int opcion = 0, correctas=0;
         
-        int arrayCorrectas[] = new int[alumnos];
-        float nota = 0;
+
         
         System.out.println("Menú:");
         System.out.println("   • Opción 1 Notas: Muestra la nota obtenida de cada estudiante.\n" +
@@ -105,11 +104,36 @@ public class EjercicioObligatorio6 {
             System.out.println("Introduce el número de la opción (valores entre 1 y 4):");
             opcion = reader.nextInt();
         }while(opcion<=0||opcion>4);
-
+        
+        int arrayCorrectas[] = new int[alumnos];
+        float nota = 0;
+        
         if(opcion == 1){
             // Muestra la nota obtenida de cada estudiante. Esta nota 
             // corresponde al número de aciertos que tuvo el estudiante.
             
+            for (int xFilas=0; xFilas < arrayRespuestasAlumnos.length; xFilas++) {
+
+                for (int y=0; y < arrayRespuestasAlumnos[xFilas].length; y++) {
+                    
+                    // resetear correctas
+                    if(y==0){
+                    correctas=0;  
+                    }
+                    
+                    if(arrayRespuestasAlumnos[xFilas][y].equals(arrayRespCorrectas[xFilas])){
+                        System.out.println("Correctas = "+ correctas );
+                        
+                        correctas++;
+                    }                  
+                    arrayCorrectas[xFilas] = correctas;
+                    
+                    
+                }
+                  
+            }
+            
+            /*
             for (int x=0; x < arrayRespuestasAlumnos.length; x++) {
 
                 for (int y=0; y < arrayRespuestasAlumnos[x].length; y++) {
@@ -119,34 +143,58 @@ public class EjercicioObligatorio6 {
                         System.out.println("resp correc "+arrayRespCorrectas[x]);
                         correctas++;
                         System.out.println("Correctas = "+ correctas );
-                    }
-                    
-                arrayCorrectas[y] = correctas;
+                    }                  
+                    arrayCorrectas[x] = correctas;
                 }
-                
                 correctas=0;                    
-                    
             }
             
-            System.out.println("El array generado es: " + Arrays.toString(arrayCorrectas));
-            /*
             for (int i = 0; i < arrayCorrectas.length; i++) {
-                if(arrayCorrectas[i]==0){
-                    System.out.println("Alumnx " + arrayNombres[i]);
-                    nota = 0;
-                    System.out.println("Nota: "+ nota);
-                }else{
-                    System.out.println("Alumnx " + arrayNombres[i]);
-                    nota = arrayCorrectas[i]/N*10;
-                    System.out.println("Nota: "+ nota);
-                }
+
+                System.out.println("Alumnx " + arrayNombres[i]);
+                nota = arrayCorrectas[i];
+                System.out.println("Nota: "+ nota+"/"+N);
             }*/
+            
         }else if(opcion == 2){
             // Muestra la media de aciertos de los 8 alumnos.
+            int sumaCorrectas=0;
+            
+            System.out.println("El array generado es: " + Arrays.toString(arrayCorrectas));
+            
+            for (int i = 0; i < arrayCorrectas.length; i++) {
+                sumaCorrectas += arrayCorrectas[i];
+                System.out.println("arrayCorrectas[] "+ arrayCorrectas[i]);
+                System.out.println("sumaCorrectas = "+sumaCorrectas);
+            } 
+            
+            System.out.println("La media de aciertos es de" +(sumaCorrectas/N)+ " sobre "+N+" preguntas.");
+            
         }else if(opcion == 3){
             // Nota Alumno: dado un nombre de un alumno, muestra su nota.
+            String nombreAlumno = "";
+            int posicion = 0;
+            
+            basura = reader.nextLine();
+            System.out.println("Escribe el nombre del alumno. ");
+            nombreAlumno = reader.nextLine();
+            
+            for (int i = 0; i < arrayNombres.length; i++) {
+                
+                if(nombreAlumno.equalsIgnoreCase(arrayNombres[i])){
+                    posicion = i;
+                }
+                
+            };
+            
+            System.out.println("La posición de "+nombreAlumno+" es "+ posicion);
+            
+            
+            
         }else if(opcion == 4){
             // Pregunta: Muestra el número de la pregunta más acertada.
+            
+            
         }
     }
     
