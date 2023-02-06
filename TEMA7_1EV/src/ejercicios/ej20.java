@@ -14,22 +14,20 @@ public class ej20 {
                          
         Scanner reader = new Scanner(System.in);  
         int a;
-        int resultado[] = new int[10];
         
         System.out.println("Escribe un número: ");
         a = reader.nextInt();
         
-        resultado = calculaTabla(a);  
+        calculaTabla(a);  
     }
     
-    public static int[] calculaTabla(int a){   
+    public static void calculaTabla(int a){   
         int tabla[] = new int[10];
 
         for (int i = 0; i < tabla.length; i++) {
             tabla[i] = (i+1)*a;
             System.out.println((i+1)+" x "+ a +" = " + tabla[i]);
         }
-        return tabla;
     }
 }
 
