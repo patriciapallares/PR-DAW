@@ -1,26 +1,28 @@
 package ejercicioObligatorio7;
 
-import static ejercicios.ej1.multiplica;
 import java.util.Scanner;
 
 /**
  *
  * @author patriciapallares
  */
+
 public class ejercicioObligatorio7 {
     
         public static void main(String[] args){
             
         String numeroContrato;
-        float kWConsumidos;
+        float kWConsumidos, potencia;
         
         numeroContrato = pideNumContrato();
         
-
+        potencia = pidePotencia();
          
         kWConsumidos = pidekWConsumidos();
         
-                 System.out.println("Es = " + numeroContrato+" y es "+potencia+" kw");
+                 System.out.println("Es = " + numeroContrato+" y "+potencia+" es "+kWConsumidos+" kw");
+                 
+                 
         // Se debe solicitar:    
             /*
             Su número de contrato, con siguiente formato (ddd-dddd) donde d es 
@@ -28,18 +30,6 @@ public class ejercicioObligatorio7 {
             Potencia contratada.
             El total de kW consumidos en el mes.
             */
-            
-     
-            
-        /*  
-
-
-
-        
-        resultado = multiplica(N,M);
-        
-        System.out.println("El resultado es: "+resultado);
-        */  
         
         // Se devuelve
         
@@ -53,16 +43,6 @@ public class ejercicioObligatorio7 {
             */
         
     }
-        
-    // Métodos
-        
-        /*
-
-
-        Un método para calcular el importe según los kW consumidos y la potencia contratada.
-        Un método para calcular el incremento.
-        
-        */
         
 // Un método para pedir el número de contrato (validando posibles errores).
         
@@ -78,7 +58,6 @@ public class ejercicioObligatorio7 {
         numero = reader.nextLine();
         
         }while(numero.length()<8 && numero.charAt(3)!='-');
-        
 
         for (int i = 0; i < 8; i++) {
             validacion = false;
@@ -110,9 +89,20 @@ public class ejercicioObligatorio7 {
     public static float pidekWConsumidos(){
         Scanner reader = new Scanner(System.in);
         float kWConsumidos;
-        System.out.println("Introduce una potencia válida:");
+        System.out.println("Introduce kw consumidos válidos:");
         kWConsumidos = reader.nextFloat();
         
         return kWConsumidos;
     }
+    
+    
+        // Métodos
+        
+        /*
+
+        Un método para calcular el importe según los kW consumidos y la potencia contratada.
+        Un método para calcular el incremento.
+        
+        */
+        
 }
