@@ -11,8 +11,8 @@ public class ejercicioObligatorio7 {
     
         public static void main(String[] args){
             
-        String numeroContrato;
-        float kWConsumidos, potencia;
+        String numeroContrato, potencia;
+        double kWConsumidos;
         
         numeroContrato = pideNumContrato();
         
@@ -20,7 +20,7 @@ public class ejercicioObligatorio7 {
          
         kWConsumidos = pidekWConsumidos();
         
-                 System.out.println("Es = " + numeroContrato+" y "+potencia+" es "+kWConsumidos+" kw");
+        System.out.println("Es = " + numeroContrato+" y "+potencia+" es "+kWConsumidos+" kw");
                  
                  
         // Se debe solicitar:    
@@ -75,11 +75,18 @@ public class ejercicioObligatorio7 {
     
 // Un método para pedir la potencia contratada  FALTA / TODO (validando posibles errores).
 
-    public static float pidePotencia(){
+    public static String pidePotencia(){
         Scanner reader = new Scanner(System.in);
-        float potencia;
-        System.out.println("Introduce una potencia válida:");
-        potencia = reader.nextFloat();
+        String potencia = "0";
+        
+        do{
+        System.out.println("Introduce una potencia válida: ej: 4,60");
+        potencia = reader.nextLine();
+            System.out.println("Potencia introducida = "+potencia);
+        
+        }while(!"3,45".equals(potencia) && !"4,60".equals(potencia) && !"5,75".equals(potencia) && !"6,90".equals(potencia) && !"8,05".equals(potencia));
+       
+        //  
         
         return potencia;
     }
