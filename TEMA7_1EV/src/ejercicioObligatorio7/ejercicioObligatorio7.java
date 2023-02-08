@@ -95,14 +95,22 @@ public class ejercicioObligatorio7 {
         return kWConsumidos;
     }
     
+// FALTA / TODO Un método para calcular el importe según los kW consumidos y la potencia contratada.
     
-        // Métodos
+    public static float calculaImporte(){
+        float kWConsumidos = 0;
         
-        /*
+        return kWConsumidos;
+    }    
 
-        Un método para calcular el importe según los kW consumidos y la potencia contratada.
-        Un método para calcular el incremento.
+
+// FALTA / TODO Un método para calcular el incremento.
+    
+    public static float calculaIncremento(){
+        float kWConsumidos = 0;
         
-        */
+        return kWConsumidos;
+    } 
+        
         
 }
