@@ -20,6 +20,8 @@ public class Punto {
         return y;
     }    
     
+    
+    
     public void setX(int x) {
         this.x = x;
     }

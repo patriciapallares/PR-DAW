@@ -1,4 +1,4 @@
-package apartadoA;
+package APARTADOA;
 
 /**
  *
