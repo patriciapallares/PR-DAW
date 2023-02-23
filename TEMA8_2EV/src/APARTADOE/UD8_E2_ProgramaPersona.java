@@ -1,10 +1,9 @@
-package APARTADOD;
-
+package APARTADOE;
 /**
  *
  * @author patriciapallares
  */
-public class UD8_D2_ProgramaPersona {
+public class UD8_E2_ProgramaPersona {
     
     public static void main(String[] args){
         

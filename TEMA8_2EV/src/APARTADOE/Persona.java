@@ -1,4 +1,6 @@
-package APARTADOD;
+package APARTADOE;
+
+import APARTADOD.*;
 
 /**
  *
@@ -35,10 +37,11 @@ public class Persona {
     }    
     
     
-    
+    /*
     public void setDni(String dni) {
         this.dni = dni;
     }
+    */
     
     public void setNombre(String nombre) {
         this.nombre = nombre;

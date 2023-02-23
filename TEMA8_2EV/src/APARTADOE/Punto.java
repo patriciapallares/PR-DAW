@@ -1,12 +1,12 @@
-package APARTADOD;
-
+package APARTADOE;
 /**
  *
  * @author patriciapallares
  */
 public class Punto {
-     private int x, y;
+    private int x, y;
     
+     // constructor
     public Punto(int x, int y) {
         this.x = x;
         this.y = y;
@@ -41,9 +41,18 @@ public class Punto {
         x += dx;
         y += dy;
     }
-    
+
     public double distancia(Punto p){
         return Math.sqrt(Math.pow(this.x - p.x, 2) + Math.pow(this.y - p.y, 2));
     }
     
+    public static Punto creaPuntoAleatorio(){
+        
+        int aleat1 = (int) (0 + Math.random() * (100+1));
+        int aleat2 = (int) (0 + Math.random() * (100+1));
+        Punto p1 = new Punto(aleat1,aleat2);
+          
+        return p1;
+    }
 }
+
