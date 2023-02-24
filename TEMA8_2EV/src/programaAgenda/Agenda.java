@@ -4,7 +4,6 @@ package programaAgenda;
  *
  * @author patriciapallares
  */
-
 public class Agenda {
 
     // conjunto de contactos = ARRAY
@@ -36,7 +35,10 @@ public class Agenda {
                 if (contactos[i] == null) {
                     contactos[i] = c;
                     anyadido = true;
+                    // Importantísimo para que no haga 10 veces lo mismo wtf
+                    break;
                 }
+
             }
 
             if (anyadido) {
@@ -61,8 +63,7 @@ public class Agenda {
     public void listarContactos() {
         for (int i = 0; i < contactos.length; i++) {
             if (contactos[i] != null) {
-                // cosecha propia respecto al min 14
-                contactos[i].imprimir();
+                System.out.println("Contacto{ " + " Nombre= " + contactos[i].getNombre() + ", telf=" + contactos[i].getTelf() + "}");
             }
         }
     }
@@ -96,13 +97,16 @@ public class Agenda {
     }
 
     // TODO Preguntar si borramos por nombre o por contacto D:
-    public void eliminarContacto(Contacto c) {
+    public void eliminarContacto(String nombre) {
 
         boolean encontrado = false;
         for (int i = 0; i < contactos.length; i++) {
-            if (contactos[i] != null && contactos[i].equals(c)) {
+            System.out.println("¿SERÁ TRUE? " + contactos[i].getNombre().equals(nombre));
+            //  // contactos[i].equals(c)
+            if (contactos[i] != null && contactos[i].getNombre().equals(nombre)) {
                 contactos[i] = null;
                 encontrado = true;
+                break;
             }
         }
 
