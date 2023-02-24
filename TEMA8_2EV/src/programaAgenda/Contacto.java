@@ -5,7 +5,7 @@ package programaAgenda;
  * @author patriciapallares
  */
 public class Contacto {
- 
+
     private String nombre;
     private String telf;
 
@@ -35,14 +35,13 @@ public class Contacto {
     public String imprimir() {
         return "Contacto{" + "nombre=" + nombre + ", telf=" + telf + '}';
     }
-    
-    public boolean sonIguales(Contacto c){
-        
-        if(this.nombre.equalsIgnoreCase(c.getNombre())){
+
+    public boolean sonIguales(Contacto c) {
+
+        if (this.nombre.equalsIgnoreCase(c.getNombre())) {
             return true;
         }
-        
         return false;
     }
-    
+
 }
