@@ -9,6 +9,10 @@ public class Carta {
     private int numero;
     private String palo;
 
+    public static final String[] PALOS = {"espadas", "bastos", "oros", "copas"};
+    
+    
+    
     public Carta(int numero, String palo) {
 
         this.numero = numero;
@@ -23,13 +27,11 @@ public class Carta {
         return palo;
     }
 
-    public void setNumero(int numero) {
-        this.numero = numero;
+    @Override
+    public String toString() {
+        return "Carta{" + "numero=" + numero + ", palo=" + palo + '}';
     }
-
-    public void setPalo(String palo) {
-        this.palo = palo;
-    }
+    
     
     
     
