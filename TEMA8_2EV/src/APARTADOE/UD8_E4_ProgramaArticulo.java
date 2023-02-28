@@ -1,10 +1,12 @@
-package APARTADOD;
+package APARTADOE;
+
+import APARTADOD.*;
 
 /**
  *
  * @author patriciapallares
  */
-public class UD8_D4_ProgramaArticulo {
+public class UD8_E4_ProgramaArticulo {
     
     public static void main(String[] args){
         
