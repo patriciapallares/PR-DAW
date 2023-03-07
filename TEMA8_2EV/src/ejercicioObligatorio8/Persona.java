@@ -56,8 +56,14 @@ public class Persona {
     }
 
     // devolver si la persona es morosa
-    public boolean esMorosa(Cuenta c) {
-        return cuentas[0].getSaldoCuenta() < 0 || cuentas[1].getSaldoCuenta() < 0 || cuentas[2].getSaldoCuenta() < 0;
+    public boolean esMorosa() {
+        if ((cuentas[0].getSaldoCuenta() < 0) && cuentas[0] != null
+                || (cuentas[1].getSaldoCuenta() < 0) && cuentas[1] != null
+                || (cuentas[2].getSaldoCuenta() < 0) && cuentas[2] != null) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public void mostrarCuentas() {
@@ -65,7 +71,7 @@ public class Persona {
         for (int i = 0; i < 2; i++) {
             if (cuentas[i] != null) {
                 System.out.println("Cuenta " + (i + 1) + ". Saldo: " + cuentas[i].getSaldoCuenta());
-            }else{
+            } else {
                 System.out.println("No hay más cuentas.");
             }
         }
