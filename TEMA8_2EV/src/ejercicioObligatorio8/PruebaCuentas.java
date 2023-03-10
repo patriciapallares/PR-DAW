@@ -14,7 +14,7 @@ public class PruebaCuentas {
         // validar si existen personas antes de ejecutar el menú
         Scanner reader = new Scanner(System.in);
         int opcion, numCuenta;
-        float saldoCuenta, abonos;
+        float saldoCuenta, abonos, pagos;
         String dni, basura;
         Cuenta c = null;
         Persona p = null;
@@ -29,10 +29,10 @@ public class PruebaCuentas {
                     + "\n 1. Crear un nuev DNI / cliente "
                     + "\n 2. Crear una nueva cuenta y asociarlo a un DNI / cliente "
                     + "\n 3. Mostrar datos de un DNI / cliente (por DNI)"
-                    //  + "\n 4. Recibir la nómina mensual (por DNI y núm cuenta)"
-                    //  + "\n 5. Realizar un pago (por DNI y núm cuenta)"
-                    //  + "\n 6. Realizar transferencia entre cuentas (por DNI x2 y núm cuenta x2)"
-                    //  + "\n 7. Imprimir los DNIs / clientes morosos"
+                    + "\n 4. Recibir la nómina mensual (por DNI y núm cuenta)"
+                    + "\n 5. Realizar un pago (por DNI y núm cuenta)"
+                    + "\n 6. Realizar transferencia entre cuentas (por DNI x2 y núm cuenta x2)"
+                    + "\n 7. Imprimir los DNIs / clientes morosos"
                     + "\n 8. Salir del programa"
                     + "\n ------");
             System.out.println("Introduzca una opción:");
@@ -68,7 +68,6 @@ public class PruebaCuentas {
                     } else {
                         System.out.println("No se ha podido añadir DNI / cliente.");
                     }
-                    System.out.println("Mis clientes = " + clientes[0] + " , " + clientes[1]);
                 }
 
             } else if (opcion == 2) {
@@ -122,6 +121,7 @@ public class PruebaCuentas {
                 abonos = reader.nextFloat();
 
                 System.out.println("Introduzca el DNI / cliente");
+                basura = reader.nextLine();
                 dni = reader.nextLine();
 
                 System.out.println("Introduzca el número de cuenta");
@@ -134,14 +134,61 @@ public class PruebaCuentas {
                     }                   
                 }
                 
-                for (int i = 0; i < cuentas.length; i++) {
+                for (int i = 0; i < numCuentas(cuentas); i++) {
                     if (cuentas[i].getNumCuenta()==numCuenta){
                         cuentas[i].recibirAbonos(abonos);
                         System.out.println("Nómina recibida correctamente.");
                     }
                 }
 
+            } else if(opcion == 5){
+                
+                // 5. Realizar un pago (por DNI y núm cuenta)
+                
+                System.out.println("¿Cuánto es el pago?");
+                pagos = reader.nextFloat();
+
+                System.out.println("Introduzca el DNI / cliente");
+                basura = reader.nextLine();
+                dni = reader.nextLine();
+
+                System.out.println("Introduzca el número de cuenta");
+                numCuenta = reader.nextInt();
+
+                for (int i = 0; i < numClientes(clientes); i++) {
+                    if (clientes[i].getDni().equals(dni)) {
+                        cuentas = clientes[i].getCuentas();
+                        System.out.println("Cuenta identificada.");
+                    }                   
+                }
+                
+                for (int i = 0; i < numCuentas(cuentas); i++) {
+                    if (cuentas[i].getNumCuenta()==numCuenta){
+                        cuentas[i].realizarPagos(pagos);
+                        System.out.println("Pago realizado correctamente.");
+                    }
+                }
+            } else if(opcion == 6){
+                
+                // 6. Realizar transferencia entre cuentas (por DNI x2 y núm cuenta x2)
+                
+                // PENDIENTE
+                
+
+            }else if(opcion == 7){
+                
+                // 7. Imprimir los DNIs / clientes morosos
+                
+                // PENDIENTE
+                
+                for (int i = 0; i < numClientes(clientes); i++) {
+                    if(clientes[i].esMorosa()){
+                        System.out.println("DNI:"+clientes[i].getDni());                     
+                    }
+                }               
             }
+            
+            
 
         } while (opcion != 8);
 
@@ -173,6 +220,16 @@ public class PruebaCuentas {
         int totalClientes = 0;
         for (int i = 0; i < clientes.length; i++) {
             if (clientes[i] != null) {
+                totalClientes++;
+            }
+        }
+        return totalClientes;
+    }
+    
+    public static int numCuentas(Cuenta cuentas[]) {
+        int totalClientes = 0;
+        for (int i = 0; i < cuentas.length; i++) {
+            if (cuentas[i] != null) {
                 totalClientes++;
             }
         }
