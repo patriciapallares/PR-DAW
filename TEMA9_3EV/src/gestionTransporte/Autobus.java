@@ -1,18 +1,18 @@
 package gestionTransporte;
 
 public abstract class Autobus {
-    
-    private String matricula;
+
+    private int matricula;
     private double precioBase;
     private Conductor conductor;
 
-    public Autobus(String matricula, double precioBase, Conductor conductor) {
+    public Autobus(int matricula, double precioBase, Conductor conductor) {
         this.matricula = matricula;
         this.precioBase = precioBase;
         this.conductor = conductor;
     }
 
-    public String getMatricula() {
+    public int getMatricula() {
         return matricula;
     }
 
@@ -24,7 +24,7 @@ public abstract class Autobus {
         return conductor;
     }
 
-    public void setMatricula(String matricula) {
+    public void setMatricula(int matricula) {
         this.matricula = matricula;
     }
 
@@ -37,7 +37,10 @@ public abstract class Autobus {
     }
 
     //método abstracto
-    
     public abstract double calcularPrecio();
-    
+
+    //método para mostrar el nombre del conductor
+    public void mostrarNombreConductor() {
+        System.out.println(conductor.getNombre());
+    }
 }

@@ -4,7 +4,7 @@ public class BusInterurbano extends Autobus {
 
     private double numKm;
 
-    public BusInterurbano(double numKm, String matricula, double precioBase, Conductor conductor) {
+    public BusInterurbano(double numKm,  int matricula, double precioBase, Conductor conductor) {
         super(matricula, precioBase, conductor);
         this.numKm = numKm;
     }

@@ -4,7 +4,7 @@ public class BusUrbano extends Autobus {
 
     private String tipoRuta;
 
-    public BusUrbano(String tipoRuta, String matricula, double precioBase, Conductor conductor) {
+    public BusUrbano(String tipoRuta, int matricula, double precioBase, Conductor conductor) {
         super(matricula, precioBase, conductor);
         this.tipoRuta = tipoRuta;
     }
