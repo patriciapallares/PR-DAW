@@ -41,6 +41,7 @@ public class A_ej2_11 {
 
             ArrayList<String> listaNomDir = new ArrayList<String>();
             ArrayList<String> listaNomArch = new ArrayList<String>();
+            
             // Recorre la lista y muestra las carpetas
             for (int i = 0; i < lista.length; i++) {
                 if (lista[i].isDirectory()) {
