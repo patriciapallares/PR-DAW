@@ -47,7 +47,7 @@ public class B_ej1_11 {
             System.out.println("El mayor es: " + mayor);
             System.out.println("El menor es: " + menor);
             // ¡Hay que cerrar el fichero! 
-            lector.close();
+            lector2.close();
 
         } catch (Exception e) {
             // En caso de excepción mostramos el error 
