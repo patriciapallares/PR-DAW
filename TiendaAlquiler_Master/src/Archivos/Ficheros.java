@@ -11,4 +11,5 @@ package Archivos;
  */
 public class Ficheros {
     
+    // dos métodos que no sabemos qué hacen
 }

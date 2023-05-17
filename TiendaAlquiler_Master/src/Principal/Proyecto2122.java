@@ -5,7 +5,6 @@
  */
 package Principal;
 
-import Principal.MiLibreria;
 import ADO.*;
 import java.util.Scanner;
 import MisListas.ListaArticulos;
