@@ -21,7 +21,7 @@ public class programaAlquilerVehiculos {
         Furgo fu;
         Camion ca;
 
-        //ArrayList<Vehiculo> listaVehiculos = new ArrayList<Vehiculo>();
+        ArrayList<Vehiculo> listaVehiculos = new ArrayList<Vehiculo>();
 
         
         do {
