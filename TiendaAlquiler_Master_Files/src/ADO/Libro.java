@@ -6,6 +6,8 @@ public abstract class Libro extends Articulo {
     // atributos miembro
     private int numPaginas;
 
+    // Constructor:
+    
     public Libro(int numPaginas, String cod, String nombre, String fecha, 
             int anyo, String resumen, Autor autor, boolean deteriorado) {
         super(cod, nombre, fecha, anyo, resumen, autor, deteriorado);

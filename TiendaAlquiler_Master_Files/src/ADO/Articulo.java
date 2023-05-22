@@ -15,6 +15,8 @@ public abstract class Articulo implements Serializable {
     private String resumen;
     private Autor autor;
     private boolean deteriorado;
+    
+    // Así se crea e instancia? una nueva lista local
     private ArrayList<String> comentarios = new ArrayList();
 
     public Articulo(String cod, String nombre, String fecha, int anyo, 

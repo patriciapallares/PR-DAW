@@ -5,7 +5,6 @@
  */
 package Principal;
 
-import Principal.MiLibreria;
 import ADO.*;
 import Archivos.Ficheros;
 import java.util.Scanner;
@@ -59,7 +58,7 @@ public class Proyecto2122 {
             } while (opcion < 0 || opcion > 9);
             borrar = consola.nextLine();
             switch (opcion) {
-                case 1:
+                case 1: // 1. Mantenimiento de un Articulo 
                     do {
                         opcionMant = -1;
                         System.out.println();
@@ -81,7 +80,7 @@ public class Proyecto2122 {
                     } while (opcionMant < 0 || opcionMant > 2);
                     borrar = consola.nextLine();
                     switch (opcionMant) {
-                        case 1:
+                        case 1: // 1. Alta de un Artículo 
                             do {
                                 System.out.print("Nombre :");
                                 nombre = consola.nextLine();
@@ -98,16 +97,16 @@ public class Proyecto2122 {
                                     anyo = consola.nextInt();
                                     ok = MiLibreria.validarPositivo(anyo);
                                 } catch (InputMismatchException e) {
-                                    System.out.println("Error no has introducido un numero");
+                                    System.out.println("Error no has introducido un número");
                                     borrar = consola.nextLine();
                                 } catch (NumberFormatException e) {
-                                    System.out.println("Error se ha introducido un caracter no numerico");
+                                    System.out.println("Error se ha introducido un caracter no numérico");
                                     borrar = consola.nextLine();
                                 }
                             } while (!ok || anyo <= 0);
                             do {
                                 consola.nextLine();
-                                System.out.print("Resumen : ");
+                                System.out.print("Resumen: ");
                                 resumen = consola.nextLine();
                                 ok = MiLibreria.campoVacio(resumen);
                             } while (!ok);
@@ -122,10 +121,14 @@ public class Proyecto2122 {
                                 apellAutor = consola.nextLine();
                                 ok = MiLibreria.campoVacio(apellAutor);
                             } while (!ok);
+
+                            // REVISAR MÉTODO PARA BUSCAR AUTOR
                             autorObj = misAutores.buscaAutor(nomAutor + apellAutor);
                             if (autorObj == null) {
                                 System.out.println("Añadimos un nuevo autor a la lista");
+
                                 autorObj = new Autor(nomAutor, apellAutor);
+                                // MÉTODO PARA INSERTAR NUEVO AUTOR
                                 misAutores.anadirAutor(autorObj);
                             } else {
                                 System.out.println("El autor ya estaba dado de alta !");
@@ -200,8 +203,11 @@ public class Proyecto2122 {
                                         ok = MiLibreria.validarTapa(tapa);
                                     } while (!ok);
 
+                                    // DECLARACIÓN DEL ARTÍCULO
                                     art = new LibroImpreso(formato, tapa, nPaginas, nombre,
                                             fecha, anyo, resumen, autorObj, deteriorado);
+                                    
+                                    // MÉTODO PARA INSERTAR EN LA LISTA DE ARTÍCULOS
                                     ok = misArticulos.anadirArticulo(art);
                                     if (ok) {
                                         System.out.println("Artículo añadido !!!");
@@ -268,6 +274,7 @@ public class Proyecto2122 {
                                             borrar = consola.nextLine();
                                         }
                                     } while (!ok);
+                                    
                                     art = new AudioLibro(sintetizador, horasDuracion, horasDuracion,
                                             nPaginas, nombre, fecha, anyo, resumen, autorObj, deteriorado);
                                     ok = misArticulos.anadirArticulo(art);
@@ -396,7 +403,7 @@ public class Proyecto2122 {
                             break;
                     }
                     break;
-                case 2:
+                case 2: // 2. Precio alquiler de un artículo
                     consola.nextLine();
                     System.out.print("Código Artículo: ");
                     cod = consola.nextLine();
@@ -424,7 +431,7 @@ public class Proyecto2122 {
                     }
                     break;
 
-                case 3:
+                case 3: // 3. Precio alquiler de todos los artículos
                     ok = false;
                     do {
                         try {
@@ -481,6 +488,7 @@ public class Proyecto2122 {
                     telef3 = consola.nextLine();
 
                     cli = new Cliente(dni, nombre, apellidos, direcc, telef1, telef2, telef3, 0);
+                    
                     if (misClientes.buscaCliente(dni) == null) {
                         ok = misClientes.anadirCliente(cli);
                         if (ok) {
@@ -492,7 +500,7 @@ public class Proyecto2122 {
                         System.out.println("Ese cliente ya existe");
                     }
                     break;
-                    
+
                 case 5:
                     ok = false;
                     do {

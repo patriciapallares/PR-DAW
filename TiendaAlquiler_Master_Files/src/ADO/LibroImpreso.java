@@ -1,12 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ADO;
 
 public class LibroImpreso extends Libro{
     // atributos de clase
+    // Código único
     private static int numCod = 1;
      
     // atributos
@@ -63,6 +59,7 @@ public class LibroImpreso extends Libro{
     public boolean guardaComentario(String c) {
         boolean resp=false;
         if (!c.isEmpty()){
+            // traemos la lista de comments de Artículo y añadimos un comment nuevo
              getComentarios().add(c);
              resp=true;
         }

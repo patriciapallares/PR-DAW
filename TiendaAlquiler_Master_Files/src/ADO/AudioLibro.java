@@ -7,6 +7,7 @@ package ADO;
 
 public class AudioLibro extends Libro {
     // atributos de clase
+    // Código único
     private static int numCod = 1;
     
     // atributos
@@ -14,6 +15,7 @@ public class AudioLibro extends Libro {
     private int   horasDuracion;
     private int   minDuracion;
     
+    // Constructor: 
     public AudioLibro(boolean sintetizador, int horasDuracion, int minDuracion, 
             int numPaginas, String nombre, String fecha, int anyo, 
             String resumen, Autor autor, boolean deteriorado) {
@@ -22,6 +24,7 @@ public class AudioLibro extends Libro {
         this.sintetizador = sintetizador;
         this.horasDuracion = horasDuracion;
         this.minDuracion = minDuracion;
+        // Incrementar código único
         numCod++;
     }
 

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package MisListas;
 
 import ADO.Cliente;
@@ -13,15 +8,18 @@ import java.util.Iterator;
 public class ListaClientes {
      private ArrayList<Cliente> listaCli;
 
+     
+    // Constructor para instanciar y ya
     public ListaClientes() {
         this.listaCli = new ArrayList();
     }
 
+    // Constructor por parámetro
     public ListaClientes(ArrayList<Cliente> listaCli) {
         this.listaCli = listaCli;
     }
 
-    // Anadir Articuloyadir Vehiculo
+    // Añadir Articulo
     public boolean anadirCliente(Cliente cli) {
         boolean insertado = false;
         if (cli != null) {

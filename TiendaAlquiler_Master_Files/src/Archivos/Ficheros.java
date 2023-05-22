@@ -9,8 +9,11 @@ public class Ficheros {
 
     public static boolean guardarArticulos(ListaArticulos listaA) {
         /*
-        Otra manera de trabajar con ficheros es con FileOutputStream y ObjectOutStream, de esta manera podremos trabajar con ficheros binarios y almacenar objetos.
-        Solo tendríais que descomentar lo comentado, y comnetar las líneas con FileWriter, Scanner, etc
+        Otra manera de trabajar con ficheros es con FileOutputStream y 
+        ObjectOutStream, de esta manera podremos trabajar con ficheros 
+        binarios y almacenar objetos.
+        Solo tendríais que descomentar lo comentado, y comnetar las líneas 
+        con FileWriter, Scanner, etc
         */
         //FileOutputStream fs;
         //ObjectOutputStream oos;

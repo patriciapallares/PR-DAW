@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ADO;
 
-/**
- *
- * @author adminroot
- */
 public class VideoJuego extends Articulo {
     // atributo de clase
     private static float suplemento = 5f;

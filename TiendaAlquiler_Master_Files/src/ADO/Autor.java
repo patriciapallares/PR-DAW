@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ADO;
 
 import java.io.Serializable;
@@ -15,11 +10,13 @@ public class Autor implements Serializable {
     private int anyoNac;
     private int publicaciones;
 
+    // Constructor simple
     public Autor(String nom, String apell) {
         this.nom = nom;
         this.apell = apell;
     }
-
+    
+    // Constructor completo
     public Autor(String nom, String apell, int anyoNac, int publicaciones) {
         this.nom = nom;
         this.apell = apell;
