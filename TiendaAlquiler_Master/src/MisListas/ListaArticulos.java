@@ -16,6 +16,7 @@ public class ListaArticulos {
     public ListaArticulos(ArrayList<Articulo> listaArt) {
         this.listaArt = listaArt;
     }
+    
 
     // Anadir Articuloyadir Vehiculo
     public boolean anadirArticulo(Articulo art) {
