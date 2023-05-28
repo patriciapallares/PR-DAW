@@ -1,5 +1,8 @@
 package primitiva;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  *
  * @author patriciapallares
@@ -36,6 +39,16 @@ public class BoletoLoteria {
             int num1, int num2, int num3, int num4, int num5, int num6) {
 
         this.fechaBoleto = fechaBoleto;
+        this.num1 = num1;
+        this.num2 = num2;
+        this.num3 = num3;
+        this.num4 = num4;
+        this.num5 = num5;
+        this.num6 = num6;
+    }
+
+    // constructor sin ser cliente
+    public BoletoLoteria(int num1, int num2, int num3, int num4, int num5, int num6) {
         this.num1 = num1;
         this.num2 = num2;
         this.num3 = num3;
@@ -129,4 +142,32 @@ public class BoletoLoteria {
     // los números del boleto no pueden repetirse
     // dada una combinación ganadora (vector de 6 números premiados) 
     // nos * devuelva * el número de aciertos
+    // cuatro premios (en euros), para los acertantes de 3, 4, 5 y 6.
+    public int comprobarPremios(int arrayGanador[], BoletoLoteria toCheck) {
+
+        int accAciertos = 0;
+
+        int ganador[] = arrayGanador;
+
+        System.out.println(Arrays.toString(ganador));
+
+        for (int i = 0; i < ganador.length; i++) {
+            if (toCheck.getNum1() == ganador[i]) {
+                accAciertos += 1;
+            } else if (toCheck.getNum2() == ganador[i]) {
+                accAciertos += 1;
+            } else if (toCheck.getNum3() == ganador[i]) {
+                accAciertos += 1;
+            } else if (toCheck.getNum4() == ganador[i]) {
+                accAciertos += 1;
+            } else if (toCheck.getNum5() == ganador[i]) {
+                accAciertos += 1;
+            } else if (toCheck.getNum6() == ganador[i]) {
+                accAciertos += 1;
+            }
+        }
+
+        System.out.println("Acertados = " + accAciertos);
+        return accAciertos;
+    }
 }
